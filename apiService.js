@@ -33,7 +33,7 @@ app.service('apiService', function($http, $q, apiTranslator, WeatherWrapper) {
     this.getLatLongByCity = function(city) {
         var deferred = $q.defer();
         $http({
-            url: "http://maps.google.com/maps/api/geocode/json",
+            url: "https://maps.google.com/maps/api/geocode/json",
             method: "GET",
             params: { address: city }
         }).then(function(result) {
