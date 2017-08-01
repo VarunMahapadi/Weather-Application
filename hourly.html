@@ -1,0 +1,18 @@
+<div>
+    <div class="text-center">
+        <h2>Througout the day</h2>
+    </div>
+    <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+        <thead>
+            <tr>
+                <td ng-repeat="hourlyWeather in weather.hourlyWeather" class="mdl-data-table__cell--non-numeric">{{hourlyWeather.temperature}}&#8457;</td>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                <td ng-repeat="hourlyWeather in weather.hourlyWeather" class="mdl-data-table__cell--non-numeric">{{hourlyWeather.desc}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

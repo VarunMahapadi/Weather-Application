@@ -1,0 +1,31 @@
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.position-initial {
+    position: inherit;
+}
+
+.pull-right {
+    float: right;
+}
+
+.fs30 {
+    font-size: 30px;
+}
+
+.modal-title {
+    margin: 0px;
+}
+
+.modal-title span {
+    padding: 0px;
+}
+
+.wp100 {
+    width: 100%;
+}

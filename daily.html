@@ -1,0 +1,22 @@
+<div>
+    <div class="text-center">
+        <h2>Rest of the week</h2>
+    </div>
+    <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+        <thead>
+            <tr>
+                <th class="mdl-data-table__cell--non-numeric">Summary</th>
+                <th class="mdl-data-table__cell--non-numeric">Max Temperature</th>
+                <th class="mdl-data-table__cell--non-numeric">Min Temperature</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="dailyWeather in weather.dailyWeather">
+                <!--<td class="mdl-data-table__cell--non-numeric">{{dailyWeather.time | date:'EEEE' : 'UTC'}}</td>-->
+                <td class="mdl-data-table__cell--non-numeric">{{dailyWeather.desc}}</td>
+                <td class="mdl-data-table__cell--non-numeric">{{dailyWeather.maxTemperature | number : 2}}&#8457;</td>
+                <td class="mdl-data-table__cell--non-numeric">{{dailyWeather.minTemperature | number : 2}}&#8457;</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,31 @@
+<div>
+    <div class="text-center">
+        <h2>Search</h2>
+        <h4>Enter Latitude Longitude or the City</h4>
+        <h4>Date is optional</h4>
+    </div>
+    <div id="searchParams" class="container">
+
+        <div class="row">
+            <div class="row form-group form-inline" id="cityDiv">
+
+                <div class="lat mdl-textfield mdl-js-textfield">
+                    <input class="mdl-textfield__input" ng-model="lat" placeholder="Latitude..." type="text" pattern="^-?[0-9]\d*(\.\d+)?$" id="lat">
+                    <span class="mdl-textfield__error">Input is invalid!</span>
+                </div>
+                <div class="lng mdl-textfield mdl-js-textfield">
+                    <input class="mdl-textfield__input" ng-model="lng" placeholder="Longitude..." type="text" pattern="^-?[0-9]\d*(\.\d+)?$" id="lng">
+                    <span class="mdl-textfield__error">Input is invalid!</span>
+                </div>
+                <div class="city mdl-textfield mdl-js-textfield">
+                    <input class="mdl-textfield__input" placeholder="City.." type="text" id="city" ng-model="city">
+                    <p ng-bind="city"> </p>
+                </div>
+                <input type="date" ng-model="date" name="historyDate" class="form-control" id="historyDate">
+                <button ng-click="searchByLatLong(lat, lng, city, date)" id="submitLatLong" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect">
+                        <i class="material-icons">search</i>
+                    </button>
+            </div>
+        </div>
+    </div>
+</div>

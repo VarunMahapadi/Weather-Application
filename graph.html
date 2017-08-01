@@ -1,0 +1,11 @@
+<div class="mdl-grid demo-content" ng-controller="GraphCtrl" ng-init="init()">
+    
+    <div id="curve_chart" style="width: 900px; height: 500px"></div>
+    <div id="cd-dropdown" style="width: 600px">
+        <select id="cmbMoreFunction" ng-model="selected" name="cmbMoreFunction" ng-change="switchLanguage()">
+          <option value="0">Temperature</option>
+          <option value="1">Humidity</option>
+          <option value="2">WindSpeed</option>
+        </select>
+    </div>
+</div>

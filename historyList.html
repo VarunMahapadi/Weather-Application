@@ -1,0 +1,21 @@
+<div>
+    <div class="text-center">
+        <h2>Your History</h2>
+    </div>
+    <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+        <thead>
+            <tr>
+                <th class="mdl-data-table__cell--non-numeric">City</th>
+                <th class="mdl-data-table__cell--non-numeric">Latitude</th>
+                <th class="mdl-data-table__cell--non-numeric">Longitude</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="cityWeather in historyList">
+                <td class="mdl-data-table__cell--non-numeric">{{cityWeather.city}}</td>
+                <td class="mdl-data-table__cell--non-numeric">{{cityWeather.latitude}}</td>
+                <td class="mdl-data-table__cell--non-numeric">{{cityWeather.longitude}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
