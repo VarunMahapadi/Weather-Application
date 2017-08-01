@@ -1,7 +1,7 @@
 app.controller('HomeCtrl', function($scope, apiService, databaseAPIService, helperService, Position) {
     $scope.init = function() {
         console.log("Init");
-        getWeather("orlando", 0, null);
+        getWeather("New York", 0, null);
     }
 
     $scope.searchByLatLong = function(lat, lng, city, date) {
