@@ -1,6 +1,23 @@
 app.service('apiService', function($http, $q, apiTranslator, WeatherWrapper) {
+//app.service('apiService', ["$scope", "$http", "$q", "apiTranslator", "WeatherWrapper",function($scope, $http, $q, apiTranslator, WeatherWrapper) {
     
-    this.weatherdata = null;
+    //this.weatherdata = null;
+    
+    var self = this;
+
+    self.sharedVariables = { };
+    self.getSharedVariables = getSharedVariables;
+    self.setVariable = setVariable;
+
+    //function declarations
+    function getSharedVariables() {
+        return self.sharedVariables;
+    }
+    
+    function setVariable(weather) {
+        self.sharedVariables["weather"] = weather;
+    }
+    
     
     this.getWeatherByLatLong = function(url) {
         var deferred = $q.defer();
@@ -10,7 +27,7 @@ app.service('apiService', function($http, $q, apiTranslator, WeatherWrapper) {
             dataType: "jsonp",
             success: function(data) {
                 var weather = apiTranslator.getWeather(data);
-                weatherdata = setStoredWeatherData(weather);
+                setVariable(weather);
                 deferred.resolve(weather);
             }
         });
@@ -18,13 +35,13 @@ app.service('apiService', function($http, $q, apiTranslator, WeatherWrapper) {
         return deferred.promise;
     }
     
-    function setStoredWeatherData(data) {
+    /*function setStoredWeatherData(data) {
         weatherdata = data;
     }
     
     this.getStoredWeatherData = function() {
         return weatherdata;
-    }
+    }*/
     
     this.getWeatherData = function(){
         return weatherdata;

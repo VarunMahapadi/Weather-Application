@@ -1,6 +1,8 @@
 var app = angular.module('myApp', []);
 app.controller('LoginCtrl', function($scope) {
 
+    $scope.weatherData = "Varun";
+    
     firebase.auth().onAuthStateChanged(firebaseUser => {
         if (firebaseUser) {
             console.log("Logged in", firebaseUser);
