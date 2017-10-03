@@ -71,7 +71,7 @@ app.service('apiService', function($http, $q, apiTranslator, WeatherWrapper) {
     this.getCityByLatLng = function(lat, lng) {
         var deferred = $q.defer();
         $.ajax({
-            url: "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + lat + "," + lng + "&key=AIzaSyDHv-CoECbzIeZV9Y12-ZRUs2HIFKIc72k",
+            url: "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + lat + "," + lng + "&key=ENTER THE KEY",
             type: "GET",
             dataType: "json",
             success: function(data) {
